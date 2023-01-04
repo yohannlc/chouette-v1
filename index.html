@@ -1,0 +1,76 @@
+<!DOCTYPE html">
+<html lang="fr">
+  <head>
+
+    <meta charset="utf-8" />
+    <title>Chouette</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="dev/css/index.css"/>
+
+    <script src="dev/javascripts/tab-general-2018.js"></script>
+    <script src="dev/javascripts/tab-autocomplete-2018.js"></script>
+    <script src="dev/javascripts/tab-general-2019.js"></script>
+    <script src="dev/javascripts/tab-autocomplete-2019.js"></script>
+    <script src="dev/javascripts/pre-plot.js"></script>
+    
+    <script async="" src="./dev/javascripts/Line Chart_files/analytics.js.téléchargement"></script>
+    <script src="./dev/javascripts//Line Chart_files/Chart.min.js.téléchargement"></script>
+    <script src="./dev/javascripts//Line Chart_files/utils.js.téléchargement"></script>
+
+  </head>
+  <body>
+
+    <!--   INPUT   -->
+
+    <h1>Chouette</h1>
+    <form autocomplete="off" class="center">
+        <div id="div-coureur-input">
+            <label class="label-input">Chercher un coureur : </label>
+            <input type="text" id="coureur-input">
+            <input type="button" class="input" value="Graph" id="graph-input" onclick="prePlot()">
+            <div id="coureur-input-error"></div>
+        </div>
+    </form>
+
+    <div class="center">
+        <label class="label-input">Année :</label>
+        <select class="input" id="annee-input">
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+        </select>
+        <label id="label-nombre-input ">Nombre de tours :</label>
+        <input type="number" class="input" id="nombre-input" value="10" onchange="testData()">
+    </div>
+
+    <!--   GRAPH   -->
+   
+    <div class="chart-container">
+        <div class="chartjs-size-monitor">
+            <div class="chartjs-size-monitor-expand">
+                <div class=""></div>
+            </div>
+            <div class="chartjs-size-monitor-shrink">
+                <div class=""></div>
+            </div>
+        </div>
+		<canvas id="canvas" style="display: block; width: 1428px; height: 714px;" width="1428" height="714" class="chartjs-render-monitor"></canvas>
+    </div><br><br>
+
+     <!--   INPUT EQUIPE   -->
+    <form autocomplete="off" class="center">
+        <div id="div-equipe-input">
+            <label class="label-input">Chercher deux équipes : </label>
+            <input type="text" id="equipe-input">
+            <input type="button" class="input" value="Graph" id="graph-input-equipe" onclick="">
+            <div id="equipe-input-error"></div>
+        </div>
+    </form>
+
+    <script src="dev/javascripts/autocomplete.js"></script>
+    <script src="dev/javascripts/plot.js"></script>
+  
+  </body>
+</html>

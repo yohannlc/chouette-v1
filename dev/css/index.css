@@ -1,0 +1,147 @@
+
+body{
+    background-color:  rgb(39, 39, 39);
+    font-family: 'Raleway', sans-serif;
+    color: whitesmoke;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px;
+}
+
+.input {
+    color: black;
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    border: 1px solid grey;
+    background-color: whitesmoke;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+
+#div-coureur-input {
+    position: relative;
+    display: inline-block;
+}
+
+#coureur-input {
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+    vertical-align: middle;
+    background-color:white;
+}
+
+#coureur-input-error {
+    position: absolute;
+    display: inline-block;
+    width: 300px;
+}
+
+#graph-input {
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 30px;
+}
+
+.autocomplete-items {
+    padding-left: 250px;
+    font-size: 18px;
+    color: black;
+    text-align: justify;
+    position: absolute;
+    border-bottom: none;
+    border-top: none;
+    height: 2000%;
+    overflow: hidden;
+    font-family: 'Helvetica Neue', sans-serif;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.autocomplete-items div {
+    padding: 6px;
+    cursor: pointer;
+    background-color: #fff; 
+    border-bottom: 1px solid #d4d4d4; 
+}
+
+.autocomplete-items div:hover {
+    background-color: #e9e9e9; 
+}
+
+.autocomplete-active {
+    background-color: #e9e9e9 !important; 
+}
+
+#label-nombre-input {
+    position: relative;
+    display: inline-block;
+}
+
+#nombre-input {
+    width: 50px;
+    height: 31px;
+    font-size: 15px;
+    vertical-align: middle;
+    background-color:white;
+}
+
+.chart-container {
+    width: 75%;
+}
+
+canvas{
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+@keyframes chartjs-render-animation {
+    from {
+        opacity:.99
+    } to {
+        opacity:1
+    }
+}
+
+.chartjs-render-monitor {
+    animation: chartjs-render-animation 1ms
+}
+
+.chartjs-size-monitor,.chartjs-size-monitor-expand,.chartjs-size-monitor-shrink {
+    position: absolute;
+    direction: ltr;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    pointer-events: none;
+    visibility: hidden;
+    z-index:-1
+}
+
+.chartjs-size-monitor-expand>div {
+    position: absolute;
+    width: 1000000px;
+    height: 1000000px;
+    left: 0;
+    top: 0
+
+}.chartjs-size-monitor-shrink>div {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    left: 0;
+    top: 0
+}
