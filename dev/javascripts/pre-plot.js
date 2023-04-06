@@ -106,8 +106,3 @@ function secToTime (number) {
 
     return time;
 }
-
-function getTabBetweenTeams(tab1,tab2) {
-    tab_between = new Array();
-    
-}

@@ -1,7 +1,7 @@
 ''' 2019 '''
 import re
 
-file_read = open("D:/Projects/Chouette/txt/read-2019.txt","r")
+file_read = open("D:/Projects/Chouette/dev/txt/read-2019.txt","r")
 list_lines = file_read.readlines()
 file_read.close()
 
@@ -18,11 +18,11 @@ for i in range(0, len(list_lines)):
         except:
             temp120 = temp115
 
-file_write = open("D:/Projects/Chouette/txt/new-read-2019.txt","w")
+file_write = open("D:/Projects/Chouette/dev/txt/new-read-2019.txt","w")
 file_write.write(temp120)
 file_write.close()
 
-file_new_read = open("D:/Projects/Chouette/txt/new-read-2019.txt","r")
+file_new_read = open("D:/Projects/Chouette/dev/txt/new-read-2019.txt","r")
 list_new_lines = file_new_read.readlines()
 file_new_read.close()
 
@@ -117,13 +117,13 @@ for i in range(0,len(tab_initial)):
 temp44 = str(tab_general)
 temp55 = temp44.replace(', [',',\n[')
 
-file_tab_general = open("D:/Projects/Chouette/javascripts/tab-general-2019.js","w")
+file_tab_general = open("D:/Projects/Chouette/dev/javascripts/tab-general-2019.js","w")
 file_tab_general.write("let tab_general_2019 = " + temp55 + ";")
 file_tab_general.close()
 
 temp77 = str(tab_autocomplete)
 temp88 = temp77.replace(', [',',\n[')
 
-file_tab_autocomplete = open("D:/Projects/Chouette/javascripts/tab-autocomplete-2019.js","w")
+file_tab_autocomplete = open("D:/Projects/Chouette/dev/javascripts/tab-autocomplete-2019-test.js","w")
 file_tab_autocomplete.write("let tab_autocomplete_2019 = " + temp88 + ";")
 file_tab_autocomplete.close()

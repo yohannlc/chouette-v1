@@ -8,11 +8,13 @@ function autocomplete(inp, inpu) {
     year = document.getElementById("annee-input").value;
     if ( year == 2018 ) {
       arr = tab_autocomplete_2018;
+      document.getElementById("coureur-input").value = '';
+      closeAllLists();
     } else {
       arr = tab_autocomplete_2019;
+      document.getElementById("coureur-input").value = '';
+      closeAllLists();
     }
-    document.getElementById("coureur-input").value = '';
-    closeAllLists();
   });
 
   /*execute a function when someone writes in the text field:*/
@@ -110,5 +112,3 @@ function autocomplete(inp, inpu) {
   
 /*initiate the autocomplete function on the "myInput" element, and pass along the tab array as possible autocomplete values:*/
 autocomplete(document.getElementById("coureur-input"), document.getElementById("annee-input"));
-
-autocomplete(document.getElementById("equipe-input"), document.getElementById("annee-input"));
