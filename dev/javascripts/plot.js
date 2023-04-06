@@ -9,6 +9,14 @@ var config = {
 		tooltips: {
 			mode: 'index',
 			intersect: true,
+			callbacks: {
+				label: function(tooltipItem, data) {
+					var value = tooltipItem.yLabel;
+					var minutes = Math.floor(value / 60);
+					var seconds = value - minutes * 60;
+					return minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0');
+				}
+			}
 		},
 		hover: {
 			mode: 'nearest',
@@ -19,14 +27,24 @@ var config = {
 				display: true,
 				scaleLabel: {
 					display: true,
-					labelString: 'Tour'
+					labelString: 'Tour',
+					fontColor: 'white'
 				}
 			}],
 			yAxes: [{
 				display: true,
 				scaleLabel: {
 					display: true,
-					labelString: 'Temps (sec)'
+					labelString: 'Temps (mm:ss)',
+					fontColor: 'white'
+				},
+				ticks: {
+					fontColor: 'white',
+					callback: function(value, index, values) {
+						var minutes = Math.floor(value / 60);
+						var seconds = value - minutes * 60;
+						return minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0');
+					}
 				}
 			}]
 		}
@@ -89,6 +107,7 @@ function removeData1 () {
 
 var preced_number = (document.getElementById('nombre-input').value)*1;
 
+
 function testData () {
 	current_num = (document.getElementById('nombre-input').value)*1;
 
@@ -104,5 +123,5 @@ function testData () {
 
 	} else {
 		document.getElementById('nombre-input').value = preced_number;
-	}
+	}	
 }
